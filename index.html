@@ -545,6 +545,14 @@
 
         }
         // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+        const older = document.querySelector(".blog-pagination a:first-child")
+        older.addEventListener('click', removeLast)
+
+        function removeLast(){
+            let blog = document.getElementsByClassName("blog-post")
+            let post = blog[blog.length - 1]
+            post.remove()
+        }
         // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 
     </script>
