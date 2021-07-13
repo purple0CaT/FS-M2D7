@@ -555,6 +555,14 @@
         }
         // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 
+        const authors = document.querySelectorAll(".blog-post-meta a")
+
+        for(let author of authors){
+        author.addEventListener('mouseover', function (){
+            let info = author.innerText
+            alert(`Author is: ${info}`)
+        })
+    }
     </script>
   </body>
 </html>
