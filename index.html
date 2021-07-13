@@ -514,6 +514,13 @@
             icon.remove()
         }
         // EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+        function treamChar(){
+        let blogP = document.querySelectorAll(".blog-post p:nth-child(3)")
+            for ( let each of blogP){
+                    let par = each.innerText.substring(50)
+                    each.innerText = par
+            }
+        }
         // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
         // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
