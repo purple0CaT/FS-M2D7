@@ -522,6 +522,28 @@
             }
         }
         // EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+        const newer = document.querySelector(".blog-pagination a:last-child")
+        newer.classList.remove('disabled')
+
+        newer.addEventListener('click', addPost)
+
+        function addPost(){
+            let blog = document.querySelector('.blog-main h3')
+            let blogPost = document.createElement('div')
+            blogPost.classList.add("blog-post")
+
+            let title = document.createElement('h2')
+            title.classList.add("blog-post-title")
+            title.innerText = "new heading"
+
+            let par = document.createElement('p')
+            par.innerText = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat facere quam cum totam soluta culpa quas doloribus similique nihil alias! Atque libero quis ipsum suscipit! Cupiditate ut eaque tempora enim."
+            
+            blogPost.appendChild(title)
+            blogPost.appendChild(par)
+            blog.after(blogPost)
+
+        }
         // EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
         // EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
 
